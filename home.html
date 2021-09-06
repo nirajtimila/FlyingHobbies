@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', sans-serif !important;
+}
+
+body {
+background-image: url(resource/backgroundimage.jpeg)
+}
+
+nav > ul {
+  list-style-type: none;
+  width: 100vw;
+  background-image: url(resource/galaxy.png);
+  display: flex;
+  justify-content: space-between;
+    
+}
+
+li.hamburger {
+  display: none;
+}
+
+nav > ul li {
+  display: inline-block;
+  font-size: 16px;
+  color: #fff;
+  padding: .5em 1em;
+    
+}
+
+li.hamburger > .button {
+  float: right;
+  margin-right: 2em;
+  width: 1.5em;
+  height: 1.5em;
+  user-select: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+li.hamburger > .button:hover {
+  cursor: pointer;
+}
+
+nav > ul li:not(.hamburger):hover {
+  color: #e65100;
+  cursor: pointer;
+}
+
+.button div {
+  display: block;
+  height: 1px;
+  width: 2em;
+  background: #fff;
+  transition: .3s all;
+}
+
+#check {
+  display: none;
+  transform: translateX(-100vw);
+}
+
+#check:checked ~ nav > ul li:not(.hamburger) {
+  display: inline-block;
+}
+
+#check:checked ~ nav > ul li.hamburger {
+  border-bottom: 1px solid #fff;
+}
+
+#check:checked ~ nav > ul li.hamburger  > label {
+  transform: translateX(5.5px);
+}
+
+label {
+  transition: .3s all;
+}
+
+#check:checked ~ nav > ul li.hamburger > label div:nth-of-type(2) {
+  display: none;
+}
+
+#check:checked ~ nav > ul li.hamburger > label div:first-of-type {
+  transform: rotate(45deg);
+  width: 1.2em;
+  height: 1.5px;
+}
+
+#check:checked ~ nav > ul li.hamburger > label div:last-of-type {
+  transform: rotate(-45deg);
+  width: 1.2em;
+  height: 1.5px;
+}
+
+#check:checked ~ nav > ul li.hamburger > label {
+  justify-content: center;
+}
+
+@media screen and (max-width: 775px) {
+  nav > ul {
+    flex-direction: column;
+    border-bottom: 1px solid #fff;
+  }
+  li.hamburger {
+    display: inline-block;
+    margin-left: auto;
+    width: 100vw;
+  }
+  li:not(.hamburger) {
+    display: none;
+  }
+  nav > ul li:not(.hamburger):hover {
+    color: #e65100;
+    cursor: pointer;
+    transform: translateX(10px);
+  }
+}
+.bar a {
+    text-decoration: none;
+    color: white;
+}
+.bar a:hover{
+    color: #e65100;
+  cursor: pointer;
+}
+p {
+  color: #fff;
+}
+.main {
+  float:left;
+  width:100%;
+  padding:0 20px;
+    margin:10px;
+}
+    .header {
+  float:left;
+  width:100%;
+  padding:0 20px;
+    margin:5px;
+}
+    
+    .footer {
+  float:left;
+  width:100%;
+  padding:0 20px;
+}
+
+
+
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+  .menu, .main, .right, .floor_img  {
+    width:100%;
+  }
+    .logo{
+        width: 50%;
+    }
+  
+}
+    .floor_to_copter_relative_map{
+                position: absolute; 
+                left: 33%; 
+                top: 27%; 
+                width: 15%; 
+                height: 20%;
+            }
+            .floor_to_plane_relative_map{
+                position: absolute; 
+                left: 53%; 
+                top: 20%; 
+                width: 14%; 
+                height: 20%;
+            }
+    .floor_to_kite_relative_map{
+                position: absolute; 
+                left: 48%; 
+                top: 43%; 
+                width: 14%; 
+                height: 15%;
+            }
+            
+            }
+            relative_img img{
+                height: 400px;
+                width:400px;
+                
+            }
+    .floor_img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+    .logo{
+        float:left;
+        
+    }
+    .text {
+  text-align: center;
+        text-shadow: 0 0 3px #0f1dc4
+}
+    .current{
+        color:darkorange;
+    }
+</style>
+</head>
+    <title>Flying Hobbies  |  Home </title>
+<body>
+
+<div class"header" style="padding:15px;text-align:center;margin-bottom: 10px; ">
+  <img src="resource/logo.png" alt="Logo of the business" class="logo"> 
+</div>
+    
+
+               <input type="checkbox" id="check"/>
+<nav>
+  <ul>
+    <li class="hamburger">
+      <label for="check" class="button">
+        <div></div>
+        <div class="replace"></div>
+        <div></div>
+      </label>
+    </li>
+       
+      <li class="bar"><a href="home.html"> <span class="current">Home</span></a></li>
+      <li class="bar"><a href="opening_hour.html">Opening hour</a></li>
+      <li class="bar"><a href="About.html">About</a></li>
+      <li class="bar"><a href="Contact.html">Contact Us</a></li>
+    <li></li>
+  </ul>
+</nav>
+       
+
+  <div class="main">
+    <section class="relative_img"><h2 class="text" >Click on any area for details</h2>
+                <img class="floor_img" src="resource/floor_plan.jpg"  alt="Floor Plan of Physical shop"> <!-- image is in a section that's relatively positioned. Image fills the section-->
+                <a href="Copters.html" title="Quad Copter" ><section class="floor_to_copter_relative_map"></section></a> <!-- add absolutely positioned div's under the image, within -->
+                <a href="Planes.html" title="Toy Planes"><section class="floor_to_plane_relative_map"></section></a><!--the main div, and use percentages for top, left, width, and height-->
+                <a href="kites.html" title="Kites"><section class="floor_to_kite_relative_map"></section></a><!-- to get the link hit areas the size and position you want-->
+            </section> 
+  </div>
+
+  
+
+
+<div class="footer" style=" background-image: url(resource/galaxy.png);color:white;;margin-top:7px;text-align: center;">Copyright © 2020 Flying Hobbies,Sydney, Inc. All rights reserved.</div>
+
+</body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', sans-serif !important;
+}
+
+body {
+background-image: url(resource/backgroundimage.jpeg)
+}
+
+nav > ul {
+  list-style-type: none;
+  width: 100vw;
+   background-image: url(resource/galaxy.png);
+  display: flex;
+  justify-content: space-between;
+    
+}
+
+li.hamburger {
+  display: none;
+}
+
+nav > ul li {
+  display: inline-block;
+  font-size: 16px;
+  color: #fff;
+  padding: .5em 1em;
+    
+}
+
+li.hamburger > .button {
+  float: right;
+  margin-right: 2em;
+  width: 1.5em;
+  height: 1.5em;
+  user-select: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+li.hamburger > .button:hover {
+  cursor: pointer;
+}
+
+nav > ul li:not(.hamburger):hover {
+  color: #e65100;
+  cursor: pointer;
+}
+
+.button div {
+  display: block;
+  height: 1px;
+  width: 2em;
+  background: #fff;
+  transition: .3s all;
+}
+
+#check {
+  display: none;
+  transform: translateX(-100vw);
+}
+
+#check:checked ~ nav > ul li:not(.hamburger) {
+  display: inline-block;
+}
+
+#check:checked ~ nav > ul li.hamburger {
+  border-bottom: 1px solid #fff;
+}
+
+#check:checked ~ nav > ul li.hamburger  > label {
+  transform: translateX(5.5px);
+}
+
+label {
+  transition: .3s all;
+}
+
+#check:checked ~ nav > ul li.hamburger > label div:nth-of-type(2) {
+  display: none;
+}
+
+#check:checked ~ nav > ul li.hamburger > label div:first-of-type {
+  transform: rotate(45deg);
+  width: 1.2em;
+  height: 1.5px;
+}
+
+#check:checked ~ nav > ul li.hamburger > label div:last-of-type {
+  transform: rotate(-45deg);
+  width: 1.2em;
+  height: 1.5px;
+}
+
+#check:checked ~ nav > ul li.hamburger > label {
+  justify-content: center;
+}
+
+@media screen and (max-width: 720px) {
+  nav > ul {
+    flex-direction: column;
+    border-bottom: 1px solid #fff;
+  }
+  li.hamburger {
+    display: inline-block;
+    margin-left: auto;
+    width: 100vw;
+  }
+  li:not(.hamburger) {
+    display: none;
+  }
+  nav > ul li:not(.hamburger):hover {
+    color: #e65100;
+    cursor: pointer;
+    transform: translateX(10px);
+  }
+}
+.bar a {
+    text-decoration: none;
+    color: white;
+}
+.bar a:hover{
+    color: #e65100;
+  cursor: pointer;
+}
+    .bar a:active{
+        color:aqua;
+    }
+   
+
+.main {
+  float:left;
+  width:100%;
+  padding:0 20px;
+    margin:10px;
+}
+    .header {
+  float:left;
+  width:100%;
+  padding:0 20px;
+    margin:5px;
+}
+    
+    .footer {
+  float:left;
+  width:100%;
+  padding:0 20px;
+}
+
+
+
+@media only screen and (max-width:720px) {
+  /* For mobile phones: */
+  .menu, .main, .right, .floor_img  {
+    width:100%;
+  }
+    .logo{
+        width: 50%;
+    }
+    
+  
+}
+    
+
+
+
+#feedback-page{
+	text-align:center;
+}
+
+#form-main{
+	width:100%;
+	float:left;
+	padding-top:0px;
+}
+
+#form-div {
+	background-color:rgba(72,72,72,0.4);
+	padding-left:35px;
+	padding-right:35px;
+	padding-top:35px;
+	padding-bottom:50px;
+	width: 450px;
+	margin-left: auto;
+    margin-right: auto;
+  margin-top:30px;
+	
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+}
+
+.feedback-input {
+	color:#3c3c3c;
+	font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+	font-size: 18px;
+	border-radius: 0;
+	line-height: 22px;
+	background-color: #fbfbfb;
+	padding: 13px 13px 13px 54px;
+	margin-bottom: 10px;
+	width:100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+  border: 3px solid rgba(0,0,0,0);
+}
+
+.feedback-input:focus{
+	background: #fff;
+	box-shadow: 0;
+	border: 3px solid #3498db;
+	color: #3498db;
+	outline: none;
+  padding: 13px 13px 13px 54px;
+}
+
+.focused{
+	color:#30aed6;
+	border:#30aed6 solid 3px;
+}
+
+
+
+textarea {
+    width: 100%;
+    height: 150px;
+    line-height: 150%;
+    resize:vertical;
+}
+
+input:hover, textarea:hover,
+input:focus, textarea:focus {
+	background-color:white;
+}
+
+#button-blue{
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	float:left;
+	width: 100%;
+	
+	cursor:pointer;
+	background-image: url(resource/backgroundimage.jpeg);
+	color:black;
+	font-size:24px;
+	padding-top:22px;
+	padding-bottom:22px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+
+#button-blue:hover{
+	background-color: rgba(0,0,0,0);
+	color: black;
+}
+
+.ease {
+	width: 0px;
+	height: 74px;
+	background-image: url(resource/backgroundimage.jpeg);
+	-webkit-transition: .3s ease;
+	-moz-transition: .3s ease;
+	-o-transition: .3s ease;
+	-ms-transition: .3s ease;
+	transition: .3s ease;
+}
+
+
+
+@media only screen and (max-width: 720px) {
+	#form-div{
+		left: 3%;
+		
+        margin-left: auto;
+        margin-right: auto;
+		width: 88%;
+		
+		padding-left: 3%;
+		padding-right: 3%;
+	}
+}
+    .logo{
+        float:left;
+        
+    }
+    .text {
+  text-align: center;
+        text-shadow: 0 0 3px #0f1dc4
+}
+    .current{
+        color:darkorange;
+    }
+</style>
+</head>
+    <title>Flying Hobbies  |  Contact </title>
+<body>
+
+<div class"header" style="padding:15px;text-align:center;margin-bottom: 10px; ">
+  <img src="resource/logo.png" alt="Logo of the business" class="logo"> 
+</div>
+
+               <input type="checkbox" id="check"/>
+<nav>
+  <ul>
+    <li class="hamburger">
+      <label for="check" class="button">
+        <div></div>
+        <div class="replace"></div>
+        <div></div>
+      </label>
+    </li>
+       
+      <li class="bar"><a href="home.html">Home</a></li>
+      <li class="bar"><a href="opening_hour.html">Opening hour</a></li>
+      <li class="bar"><a href="About.html">About</a></li>
+      <li class="bar"><a href="Contact.html"><span class=current>Contact Us</span></a></li>
+    <li></li>
+  </ul>
+</nav>
+       
+
+ <div id="form-main">
+     
+  <div id="form-div">
+    <form class="form" id="form1">
+      <h2 style="text-align: center; color: aliceblue;">Contact Us</h2><br>
+      <p class="name">
+        <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" />
+      </p>
+      
+      <p class="email">
+        <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" />
+      </p>
+        
+        <p>
+            
+        <input name="Age" type="text" class="validate[required,custom[onlynumber]] feedback-input" id="Age" placeholder="Age" />
+      </p>
+         <p>
+            
+        
+          <select input name="Gender"  style="color: gray"type="text" class="validate[required] feedback-input" id="Country" placeholder="Australia" >
+              <option value="Select">Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+          
+        </select> <br><br>
+       
+        
+          <select input name="Country" style="color:gray" type="text" class="validate[required] feedback-input" id="Country" placeholder="Australia" >
+               <option value="Select">Select Country</option>
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+              <option value="Nepal">Nepal</option>
+              <option value="Italy">Italy</option>
+        </select> <br><br>
+      <p class="text">
+        <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment"></textarea>
+      </p>
+      
+      
+      <div class="submit">
+        <input type="submit" value="SEND" id="button-blue"/>
+        <div class="ease"></div>
+      </div>
+    </form>
+  </div>
+    </div>
+
+  
+
+
+<div class="footer" style=" background-image: url(resource/galaxy.png);color:white;;margin-top:7px;text-align: center;">Copyright © 2020 Flying Hobbies,Sydney, Inc. All rights reserved.</div>
+
+</body>
+</html>

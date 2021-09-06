@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', sans-serif !important;
+}
+
+body {
+background-image: url(resource/backgroundimage.jpeg)
+}
+
+nav > ul {
+  list-style-type: none;
+  width: 100vw;
+  background-image: url(resource/galaxy.png);
+  display: flex;
+  justify-content: space-between;
+    
+}
+
+li.hamburger {
+  display: none;
+}
+
+nav > ul li {
+  display: inline-block;
+  font-size: 16px;
+  color: #fff;
+  padding: .5em 1em;
+    
+}
+
+li.hamburger > .button {
+  float: right;
+  margin-right: 2em;
+  width: 1.5em;
+  height: 1.5em;
+  user-select: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+li.hamburger > .button:hover {
+  cursor: pointer;
+}
+
+nav > ul li:not(.hamburger):hover {
+  color: #e65100;
+  cursor: pointer;
+}
+
+.button div {
+  display: block;
+  height: 1px;
+  width: 2em;
+  background: #fff;
+  transition: .3s all;
+}
+
+#check {
+  display: none;
+  transform: translateX(-100vw);
+}
+
+#check:checked ~ nav > ul li:not(.hamburger) {
+  display: inline-block;
+}
+
+#check:checked ~ nav > ul li.hamburger {
+  border-bottom: 1px solid #fff;
+}
+
+#check:checked ~ nav > ul li.hamburger  > label {
+  transform: translateX(5.5px);
+}
+
+label {
+  transition: .3s all;
+}
+
+#check:checked ~ nav > ul li.hamburger > label div:nth-of-type(2) {
+  display: none;
+}
+
+#check:checked ~ nav > ul li.hamburger > label div:first-of-type {
+  transform: rotate(45deg);
+  width: 1.2em;
+  height: 1.5px;
+}
+
+#check:checked ~ nav > ul li.hamburger > label div:last-of-type {
+  transform: rotate(-45deg);
+  width: 1.2em;
+  height: 1.5px;
+}
+
+#check:checked ~ nav > ul li.hamburger > label {
+  justify-content: center;
+}
+
+@media screen and (max-width: 775px) {
+  nav > ul {
+    flex-direction: column;
+    border-bottom: 1px solid #fff;
+  }
+  li.hamburger {
+    display: inline-block;
+    margin-left: auto;
+    width: 100vw;
+  }
+  li:not(.hamburger) {
+    display: none;
+  }
+  nav > ul li:not(.hamburger):hover {
+    color: #e65100;
+    cursor: pointer;
+    transform: translateX(10px);
+  }
+}
+.bar a {
+    text-decoration: none;
+    color: white;
+}
+.bar a:hover{
+    color: #e65100;
+  cursor: pointer;
+}
+p {
+  color: #fff;
+}
+.main {
+  float:left;
+  width:100%;
+  padding:0 20px;
+    margin:10px;
+}
+    .header {
+  float:left;
+  width:100%;
+  padding:0 20px;
+    margin:5px;
+}
+    
+    .footer {
+  float:left;
+  width:100%;
+  padding:0 20px;
+}
+
+
+
+@media only screen and (max-width:720px) {
+  /* For mobile phones: */
+  .menu, .main, .right, .floor_img  {
+    width:100%;
+  }
+    .logo{
+        width: 50%;
+    }
+    
+  
+}
+    
+
+
+    .logo{
+        float:left;
+        
+    }
+    .text {
+  text-align: center;
+        text-shadow: 0 0 3px #0f1dc4
+}
+    .textbox{
+        
+    
+       padding: 10px;
+       margin: 0;
+      
+       margin-left: auto;
+       margin-right: auto;
+
+    }
+    .current{
+        color:darkorange;
+    }
+</style>
+</head>
+    <title>Flying Hobbies  |  About </title>
+<body>
+
+<div class"header" style="padding:15px;text-align:center;margin-bottom: 10px; ">
+  <img src="resource/logo.png" alt="Logo of the business" class="logo"> 
+</div>
+
+               <input type="checkbox" id="check"/>
+<nav>
+  <ul>
+    <li class="hamburger">
+      <label for="check" class="button">
+        <div></div>
+        <div class="replace"></div>
+        <div></div>
+      </label>
+    </li>
+       
+      <li class="bar"><a href="home.html">Home</a></li>
+      <li class="bar"><a href="opening_hour.html">Opening hour</a></li>
+      <li class="bar"><a href="About.html"><span class="current">About</span></a></li>
+      <li class="bar"><a href="Contact.html">Contact Us</a></li>
+    <li></li>
+  </ul>
+</nav>
+       
+
+
+     <section class="item3"><br><br>
+                <marquee behavior="scroll" direction="left"><p> Flying hobbies is operating 6 days a week<br><br> </p></marquee>
+
+
+
+  <div class="textbox" style="padding:15px;">
+                <p style="text-align: center; color:black"><b>Flying hobbies</b><br>
+                    --------------<br></p>
+
+                      <p style="font-family: monospace; font-size: 15px; color: black; margin-right: auto;margin-left: auto;">Flying hobbies is sydney leading technological toy sellers since 2010. Flying hobbies provides quality product in cheap price. flying hobbies in available in most of the places in Australia including Sydney,Melbourne, Brisbane and Perth.Flying hobbies is sydney leading technological toy sellers since 2010. Flying hobbies provides quality product in cheap price. flying hobbies in available in most of the places in Australia including Sydney,Melbourne, Brisbane and Perth.Flying hobbies is sydney leading technological toy sellers since 2010. Flying hobbies provides quality product in cheap price. flying hobbies in available in most of the places in Australia including Sydney,Melbourne, Brisbane and Perth.Flying hobbies is sydney leading technological toy sellers since 2010. Flying hobbies provides quality product in cheap price. flying hobbies in available in most of the places in Australia including Sydney,Melbourne, Brisbane and Perth.Flying hobbies is sydney leading technological toy sellers since 2010. Flying hobbies provides quality product in cheap price. flying hobbies in available in most of the places in Australia including Sydney,Melbourne, Brisbane and Perth.Flying hobbies is sydney leading technological toy sellers since 2010. Flying hobbies provides quality product in cheap price. flying hobbies in available in most of the places in Australia including Sydney,Melbourne, Brisbane and Perth.Flying hobbies is sydney leading technological toy sellers since 2010. Flying hobbies provides quality product in cheap price. flying hobbies in available in most of the places in Australia including Sydney,Melbourne, Brisbane and Perth.Flying hobbies is sydney leading technological toy sellers since 2010. Flying hobbies provides quality product in cheap price. flying hobbies in available in most of the places in Australia including Sydney,Melbourne, Brisbane and Perth.Flying hobbies is sydney leading technological toy sellers since 2010. Flying hobbies provides quality product in cheap price. flying hobbies in available in most of the places in Australia including Sydney,Melbourne, Brisbane and Perth.Flying hobbies is sydney leading technological toy sellers since 2010. Flying hobbies provides quality product in cheap price. flying hobbies in available in most of the places in Australia including Sydney,Melbourne, Brisbane and Perth.Flying hobbies is sydney leading technological toy sellers since 2010. Flying hobbies provides quality product in cheap price. flying hobbies in available in most of the places in Australia including Sydney,Melbourne, Brisbane and Perth.Flying hobbies is sydney leading technological toy sellers since 2010. Flying hobbies provides quality product in cheap price. flying hobbies in available in most of the places in Australia including Sydney,Melbourne, Brisbane and Perth.Flying hobbies is sydney leading technological toy sellers since 2010. Flying hobbies provides quality product in cheap price. flying hobbies in available in most of the places in Australia including Sydney,Melbourne, Brisbane and Perth.Flying hobbies is sydney leading technological toy sellers since 2010. Flying hobbies provides quality product in cheap price. flying hobbies in available in most of the places in Australia including Sydney,Melbourne, Brisbane and Perth.Flying hobbies is sydney leading technological toy sellers since 2010. Flying hobbies provides quality product in cheap price. flying hobbies in available in most of the places in Australia including Sydney,Melbourne, Brisbane and Perth.Flying hobbies is sydney leading technological toy sellers since 2010. Flying hobbies provides quality product in cheap price. flying hobbies in available in most of the places in Australia including Sydney,Melbourne, Brisbane and Perth.Flying hobbies is sydney leading technological toy sellers since 2010. Flying hobbies provides quality product in cheap price. flying hobbies in available in most of the places in Australia including Sydney,Melbourne, Brisbane and Perth.Flying hobbies is sydney leading technological toy sellers since 2010. Flying hobbies provides quality product in cheap price. flying hobbies in available in most of the places in Australia including Sydney,Melbourne, Brisbane and Perth.Flying hobbies is sydney leading technological toy sellers since 2010. Flying hobbies provides quality product in cheap price. flying hobbies in available in most of the places in Australia including Sydney,Melbourne, Brisbane and Perth.Flying hobbies is sydney leading technological toy sellers since 2010. Flying hobbies provides quality product in cheap price. flying hobbies in available in most of the places in Australia including Sydney,Melbourne, Brisbane and Perth.Flying hobbies is sydney leading technological toy sellers since 2010. Flying hobbies provides quality product in cheap price. flying hobbies in available in most of the places in Australia including Sydney,Melbourne, Brisbane and Perth.Flying hobbies is sydney leading technological toy sellers since 2010. Flying hobbies provides quality product in cheap price. flying hobbies in available in most of the places in Australia including Sydney,Melbourne, Brisbane and Perth.Flying hobbies is sydney leading technological toy sellers since 2010. Flying hobbies provides quality product in cheap price. flying hobbies in available in most of the places in Australia including Sydney,Melbourne, Brisbane and Perth.Flying hobbies is sydney leading technological toy sellers since 2010. Flying hobbies provides quality product in cheap price. flying hobbies in available in most of the places in Australia including Sydney,Melbourne, Brisbane and Perth.Flying hobbies is sydney leading technological toy sellers since 2010. Flying hobbies provides quality product in cheap price. flying hobbies in available in most of the places in Australia including Sydney,Melbourne, Brisbane and Perth.Flying hobbies is sydney leading technological toy sellers since 2010. Flying hobbies provides quality product in cheap price. flying hobbies in available in most of the places in Australia including Sydney,Melbourne, Brisbane and Perth.Flying hobbies is sydney leading technological toy sellers since 2010. Flying hobbies provides quality product in cheap price. flying hobbies in available in most of the places in Australia including Sydney,Melbourne, Brisbane and Perth.Flying hobbies is sydney leading technological toy sellers since 2010. Flying hobbies provides quality product in cheap price. flying hobbies in available in most of the places in Australia including Sydney,Melbourne, Brisbane and Perth.Flying hobbies is sydney leading technological toy sellers since 2010. Flying hobbies provides quality product in cheap price. flying hobbies in available in most of the places in Australia including Sydney,Melbourne, Brisbane and Perth.</p> 
+
+
+            
+         </div>
+            </section>
+
+
+<div class="footer" style=" background-image: url(resource/galaxy.png);color:white;;margin-top:7px;text-align: center;">Copyright © 2020 Flying Hobbies,Sydney, Inc. All rights reserved.</div>
+
+</body>
+</html>

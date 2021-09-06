@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', sans-serif !important;
+}
+
+body {
+background-image: url(resource/backgroundimage.jpeg)
+}
+
+nav > ul {
+  list-style-type: none;
+  width: 100vw;
+   background-image: url(resource/galaxy.png);
+  display: flex;
+  justify-content: space-between;
+}
+
+li.hamburger {
+  display: none;
+}
+
+nav > ul li {
+  display: inline-block;
+  font-size: 16px;
+  color: #fff;
+  padding: .5em 1em;
+}
+
+li.hamburger > .button {
+  float: right;
+  margin-right: 2em;
+  width: 1.5em;
+  height: 1.5em;
+  user-select: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+li.hamburger > .button:hover {
+  cursor: pointer;
+}
+
+nav > ul li:not(.hamburger):hover {
+  color: #e65100;
+  cursor: pointer;
+}
+
+.button div {
+  display: block;
+  height: 1px;
+  width: 2em;
+  background: #fff;
+  transition: .3s all;
+}
+
+#check {
+  display: none;
+  transform: translateX(-100vw);
+}
+
+#check:checked ~ nav > ul li:not(.hamburger) {
+  display: inline-block;
+}
+
+#check:checked ~ nav > ul li.hamburger {
+  border-bottom: 1px solid #fff;
+}
+
+#check:checked ~ nav > ul li.hamburger  > label {
+  transform: translateX(5.5px);
+}
+
+label {
+  transition: .3s all;
+}
+
+#check:checked ~ nav > ul li.hamburger > label div:nth-of-type(2) {
+  display: none;
+}
+
+#check:checked ~ nav > ul li.hamburger > label div:first-of-type {
+  transform: rotate(45deg);
+  width: 1.2em;
+  height: 1.5px;
+}
+
+#check:checked ~ nav > ul li.hamburger > label div:last-of-type {
+  transform: rotate(-45deg);
+  width: 1.2em;
+  height: 1.5px;
+}
+
+#check:checked ~ nav > ul li.hamburger > label {
+  justify-content: center;
+}
+.bar a {
+    text-decoration: none;
+    color: white;
+}
+.bar a:hover{
+    color: #e65100;
+  cursor: pointer;
+}
+@media screen and (max-width: 720px) {
+  nav > ul {
+    flex-direction: column;
+    border-bottom: 1px solid #fff;
+  }
+  li.hamburger {
+    display: inline-block;
+    margin-left: auto;
+    width: 100vw;
+  }
+  li:not(.hamburger) {
+    display: none;
+  }
+  nav > ul li:not(.hamburger):hover {
+    color: #e65100;
+    cursor: pointer;
+    transform: translateX(10px);
+  }
+}
+
+p {
+  color: #fff;
+}
+.main {
+  float:left;
+  width:100%;
+  padding:0 20px;
+    margin:10px;
+}
+    .header {
+  float:left;
+  width:100%;
+  padding:0 20px;
+    margin:5px;
+}
+    
+    .footer {
+  float:left;
+  width:100%;
+  padding:0 20px;
+}
+
+
+
+@media only screen and (max-width:720px) {
+  /* For mobile phones: */
+  .menu, .main, .right, .floor_img  {
+    width:100%;
+  }
+    .logo{
+        width: 50%;
+    }
+  
+}
+    .logo{
+        float:left;
+        
+    }
+    .text {
+  text-align: center;
+        text-shadow: 0 0 3px #0f1dc4
+}
+    /* table for big screen devices like desktop and laptop*/
+    table { 
+	width: 750px; 
+	border-collapse: collapse; 
+	margin:50px auto;
+	}
+
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+	background: #eee; 
+	}
+
+th { 
+	background-image: url(resource/galaxy.png); 
+	color: white; 
+	font-weight: bold; 
+	}
+
+td, th { 
+	padding: 10px; 
+	border: 1px solid #ccc; 
+	text-align: left; 
+	font-size: 18px;
+	}
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 720px),
+(min-device-width: 34opx) and (max-device-width: 720px)  {
+
+	table { 
+	  	width: 100%; 
+	}
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		/* Label the data */
+		content: attr(data-column);
+
+		color: #000;
+		font-weight: bold;
+	}
+    
+
+}
+</style>
+</head>
+    <title>Flying Hobbies  |  Opening Hour </title>
+<body>
+
+<div class"header" style="padding:15px;text-align:center;margin-bottom: 10px; ">
+  <img src="resource/logo.png" alt="Logo of the business" class="logo"> 
+</div>
+
+               <input type="checkbox" id="check"/>
+<nav>
+  <ul>
+    <li class="hamburger">
+      <label for="check" class="button">
+        <div></div>
+        <div class="replace"></div>
+        <div></div>
+      </label>
+    </li>
+    <li class="bar"><a href="home.html">Home</a></li>
+       <li class="bar"><a href="opening_hour.html"> <span style="color: darkorange">Opening hour</span></a></li>
+      <li class="bar"><a href="About.html">About</a></li>
+      <li class="bar"><a href="Contact.html">Contact Us</a></li>
+    <li></li>
+  </ul>
+  <br>
+    </nav>
+  <marquee behavior="scroll" direction="left"><p style="text-shadow: 0 0 3px #0f1dc4;"> Flying hobbies is operating 6 days a week<br><br> </p></marquee>
+
+
+
+
+    <h2 style="text-align: center; color:black;">Opening Hours</h2>
+  <table>
+  <thead>
+    <tr>
+      <th>Days</th>
+      <th>Opening hours</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-column="Day">Sunday</td>
+      <td data-column="Hours">Closed</td>
+      
+    </tr>
+    <tr>
+      <td data-column="Day">Monday</td>
+      <td data-column="Hours">10:00am to 4:00pm</td>
+     
+    </tr>
+    <tr>
+      <td data-column="Days">Tuesday</td>
+      <td data-column="Hours">10:00am to 4:00pm</td>
+      
+    </tr>
+    <tr>
+      <td data-column="Days">Wednesday</td>
+      <td data-column="Hours">10:00am to 4:00pm</td>
+      
+    </tr>
+    <tr>
+      <td data-column="Days">Thursday</td>
+      <td data-column="Hours">10:00am to 4:00pm</td>
+      
+    </tr>
+      <tr>
+      <td data-column="Days">Friday</td>
+      <td data-column="Hours">10:00am to 1:00pm, 2:00pm to 6:00pm</td>
+      
+    </tr>
+      <tr>
+      <td data-column="Days">Saturday</td>
+      <td data-column="Hours">8:00am to 4:00pm</td>
+      
+    </tr>
+      <tr>
+      <td data-column="Days">Public Holiday</td>
+      <td data-column="Hours">Closed</td>
+      
+    </tr>
+  </tbody>
+</table>
+
+
+<div class="footer" style=" background-image: url(resource/galaxy.png);color:white;;margin-top:7px;text-align: center;">Copyright © 2020 Flying Hobbies,Sydney, Inc. All rights reserved.</div>
+
+</body>
+</html>

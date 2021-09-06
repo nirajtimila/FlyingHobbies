@@ -1,0 +1,27 @@
+Toy Planes
+----------
+tp1 - Fighter Plane
+tp2 - Lego Rescue Plane
+tp3 - Styro Glider
+tp4 - Rubberband Flyer
+tp5 - Kitty Hawk	
+tp6 - Helicopter
+
+Kites
+-----
+kt1 - Box Kite
+kt2 - Angel Fish
+kt3 - Clown Kite
+kt4 - Stingray
+kt5 - Owl	
+kt6 - Wau Bulan
+
+
+Quad Copters
+------------
+qc1 - Apollo Quadcopter
+qc2 - L6036
+qc3 - Cam Copter
+qc4 - Cam Copter II
+qc5 - UDI Free Loop	
+qc6 - XK-X250-X350
