@@ -35,9 +35,19 @@ Fig: Mockup Content detail page on screen resolution  1280x1024
 <p>This Mobile phone mockup is designed for the desktop with screen resolution  360*640.</p>
 <h3>
 2.2.2.2.2 Home page </h3>
-<img src="resource/portfolio/wireframe-home-mobile.png" width="1000px" height="400px">
+<img src="resource/portfolio/wireframe-home-mobile.png" width="200px" height="400px">
 <p>Fig: Mockup home page on screen resolution 360*640</p>
 <h3>
 2.2.2.2.2 Content page
-<h3>
+</h3>
 
+<img src="resource/portfolio/wireframe-content-mobile.png" width="200px" height="400px">
+
+<p>Fig: Mockup Content page on screen resolution 360*640</p>
+
+
+<h3>2.2.2.2.3 Content detail page</h3>
+<img src="resource/portfolio/wireframe-detailpage-mobile.png" width="200px" height="400px">
+<p>Fig: Mockup Content detail page on screen resolution 360*640</p>
+
+    
